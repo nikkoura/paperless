@@ -22,8 +22,8 @@ jobs:
       - name: Prepare
         id: prepare
         run: |
-          DOCKER_IMAGE=nikkoura/docker-diaspora-test
-          DOCKER_PLATFORMS=linux/amd64,linux/arm64
+          DOCKER_IMAGE=nikkoura/paperless
+          DOCKER_PLATFORMS=linux/amd64,linux/arm64,linux/arm
           VERSION=${GITHUB_REF#refs/*/}
           echo xX$VERSION
           TAGS="--tag ${DOCKER_IMAGE}:${VERSION}"
